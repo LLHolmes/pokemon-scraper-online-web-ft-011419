@@ -11,7 +11,7 @@ class Pokemon
   end
   
   def self.save(id, name, type)
-    self.new(id: id, name: name, type: type)
+    @@all << self.new(id: id, name: name, type: type)
   end
   
   def self.find(id, x)
