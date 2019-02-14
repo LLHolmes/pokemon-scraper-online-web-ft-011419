@@ -26,7 +26,7 @@ class Pokemon
     puts @hp
   end
   
-  def hp
-  end
+  # def hp
+  # end
   
 end
