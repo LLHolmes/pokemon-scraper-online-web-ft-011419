@@ -16,9 +16,8 @@ class Pokemon
   
   def self.find(given_id, db)
     new_info = db.execute("SELECT * FROM pokemon WHERE id = (?)", given_id).flatten
-    puts new_info.inspect
-    # binding.pry
-    # Pokemon.new(new_info)
+    # puts new_info.inspect
+    Pokemon.new(id = new_info)
   end
   
 end
