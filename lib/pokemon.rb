@@ -11,7 +11,8 @@ class Pokemon
   def save
   end
   
-  def find
+  def find(id)
+    
   end
   
 end
