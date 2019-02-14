@@ -22,8 +22,10 @@ class Pokemon
   end
   
   def alter_hp(given_id, hp_hit)
-    @hp += hp_hit
+    puts hp_hit
     puts @hp
+    # @hp += hp_hit
+    # puts @hp
   end
   
   # def hp
