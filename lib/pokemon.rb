@@ -22,8 +22,9 @@ class Pokemon
   end
   
   def alter_hp(new_hp, given_id)
-    db.execute("INSERT INTO pokemon (hp) VALUES (?) HAVING id = (?)", new_hp, given_id)
-    db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", new_hp, self.id)
+    db.execute("UPDATE pokemon SET hp = ? WHERE id = ?;", new_hp, given_id)
+    # db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", new_hp, self.id)
+    # UPDATE pokemon SET hp = ? WHERE id = ?;
     # puts hp_hit
     # puts given_id
     # @hp += hp_hit
