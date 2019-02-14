@@ -12,10 +12,6 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", given_name, given_type)
   end
   
-  # def self.save(name, breed, age, database_connection)
-  #   database_connection.execute("INSERT INTO cats (name, breed, age) VALUES (?, ?, ?)",name, breed, age)
-  # end
-  
   def self.find(given_id, db)
     Pokemon.new(db.execute("SELECT * FROM pokemon WHERE id = given_id"))
   end
